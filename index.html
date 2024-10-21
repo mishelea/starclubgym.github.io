@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Club Gym</title>
+    <link href="1.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="gym.css"> 
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">STAR CLUB GYM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="conociendonos.html">Conociéndonos</a></li>
+                <li><a href="beneficios.html">Beneficios</a></li>
+                <li><a href="disciplinas.html">Disciplinas</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-text">
+            <p class="subtitulo">Más Que Un Gimnasio, Un Entorno De Soluciones Integrales</p>
+            <h1>Ponte En Forma</h1>
+            
+        </div>
+    </section>
+
+    <section class="contenedores">
+        <div class="contenedor-principal"> 
+            <div class="container-box rojo">
+                <h2>Desarrollo Muscular</h2>
+                <p>Entrena con pesas, haciendo ejercicios compuestos al menos dos veces por semana. Varía tu rutina, consume suficiente proteína, carbohidratos y grasas saludables, y descansa bien durmiendo entre 7 y 9 horas. Anota tu progreso y ajusta tu entrenamiento si no ves resultados. Con constancia, lograrás tus objetivos.</p>   
+            </div>
+            <div class="container-box negro">
+                <h2>Definición Muscular</h2>
+                <p>Proceso de aumentar la visibilidad de los músculos al reducir la grasa corporal, logrando un aspecto tonificado. Se logra mediante entrenamiento de fuerza, un déficit calórico, una dieta alta en proteínas, ejercicios cardiovasculares y un adecuado descanso. El objetivo es mejorar la apariencia física y el rendimiento general.</p>   
+            </div>
+            <div class="container-box azul">
+                <h2>Desarrollo Mental</h2>
+                <p>Implica mejorar el bienestar psicológico a través del ejercicio, reduciendo el estrés, aumentando la autoestima y fomentando la disciplina y la socialización, lo que contribuye a una mentalidad más positiva y resiliente.</p>    
+            </div>
+        </div> 
+    </section>
+
+    <script>
+        const images = ['4.png', '2.png']; 
+        let currentIndex = 0;
+        const heroSection = document.getElementById('hero');
+
+        function changeBackgroundImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            heroSection.style.backgroundImage = `url(${images[currentIndex]})`;
+        }
+
+        setInterval(changeBackgroundImage, 5000); // Cambia cada 5 segundos
+    </script>
+
+    <footer class="footer">
+        <p>© 2024 Star Club Gym - Oruro - Bolivia</p>
+    </footer>
+
+    <audio id="audio" controls autoplay loop>
+        <source src="1.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+</body>
+</html>

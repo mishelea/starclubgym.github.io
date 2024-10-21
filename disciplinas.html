@@ -1,0 +1,170 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Club Gym</title>
+    <link href="1.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="clases.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">STAR CLUB GYM</div>
+        <nav>
+            <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="conociendonos.html">Conociéndonos</a></li>
+                    <li><a href="beneficios.html">Beneficios</a></li>
+                    <li><a href="disciplinas.html">Disciplinas</a></li>
+                   
+            </ul>
+        </nav>
+        <div class="centered-text">Cursos que tiene el GYM</div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="feature-box">
+            <img src="22.png" alt="Progression Icon">
+            <div class="text-content">
+                <h4>TAEKWONDO De Combate</h4>
+                <p>Es un arte marcial coreano que combina técnicas de patadas, golpes y defensa personal, fomentando la disciplina, el respeto y el autocontrol. </p>
+            </div>
+        </div>
+        <div class="feature-box red-background">
+            <img src="10.png" alt="Workout Icon">
+            <div class="text-content">
+                <h4>MAQUINAS</h4>
+                <p>Nuestras máquinas en el gimnasio son herramientas que te ayudarán a alcanzar tus objetivos de fitness de manera segura y efectiva, asi personalizar tu rutina y maximizar tus resultados.</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <img src="24.png" alt="Nutrition Icon">
+            <div class="text-content">
+                <h4>SIN DISCIPLINA</h4>
+                <p>Espacio que en el transcurso de los meses se ira implementando, buscando siempre las mejores opciones para nuestros clientes con seriedad y puntualidad</p>
+            </div>
+        </div>
+    </section>
+    
+    <center><h1>Nuestras Máquinas</h1></center>
+    
+    <section class="gallery">
+        <div class="gallery-images">
+            <img src="1.1.jpeg" alt="Imagen 1" class="active">
+            <img src="1,2.jpeg" alt="Imagen 2">
+            <img src="1.3.jpeg" alt="Imagen 3">
+            <img src="1.4.jpeg" alt="Imagen 4">
+            <img src="1.5.jpeg" alt="Imagen 5">
+            <img src="1.6.jpeg" alt="Imagen 6">
+            <img src="1.7.jpeg" alt="Imagen 7">
+            <img src="1.8.jpeg" alt="Imagen 8">
+            <img src="1.9.jpeg" alt="Imagen 9">
+            <img src="1.10.jpeg" alt="Imagen 10">
+            <img src="1.11.jpeg" alt="Imagen 11">
+            <img src="1.12.jpeg" alt="Imagen 12">
+            <img src="1.13.jpeg" alt="Imagen 13">
+            <img src="1.14.jpeg" alt="Imagen 14">
+            <img src="1.15.jpeg" alt="Imagen 15">
+            <img src="1.16.jpeg" alt="Imagen 16">
+            <img src="1.17.jpeg" alt="Imagen 17">
+            <img src="1.18.jpeg" alt="Imagen 18">
+            <img src="1.19.jpeg" alt="Imagen 19">
+            <img src="1.20.jpeg" alt="Imagen 20">
+            <img src="1.21.jpeg" alt="Imagen 21">
+            <img src="1.22.jpeg" alt="Imagen 22">
+            <img src="1.23.jpeg" alt="Imagen 23">
+            <img src="1.24.jpeg" alt="Imagen 24">
+            <img src="1.25.jpeg" alt="Imagen 25">
+            <img src="1.26.jpeg" alt="Imagen 26">
+            <img src="1.27.jpeg" alt="Imagen 27">
+            <img src="1,28.jpeg" alt="Imagen 28">    
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery-images img');
+        
+        function changeImage() {
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+        }
+        setInterval(changeImage, 2000);
+    </script>
+
+<div class="container">
+    <div class="info-box">
+        <h2>¿Qué es el Índice de Masa Corporal (IMC)?</h2>
+        <p>El Índice de Masa Corporal (IMC) es una medida que relaciona el peso y la estatura para determinar si una persona tiene un peso saludable. Se utiliza como una referencia para evaluar el riesgo de enfermedades relacionadas con el peso.</p>
+    </div>
+
+    <div class="calculator-box">
+        <h2>Calculadora de IMC</h2>
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" placeholder="Ingresa tu altura">
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" placeholder="Ingresa tu peso">
+        <button onclick="calculateBMI()">Calcular IMC</button>
+        <p id="bmi-result"></p>
+    </div>
+</div>
+
+<script>
+    function calculateBMI() {
+        const height = document.getElementById('height').value / 100; // Convertimos cm a metros
+        const weight = document.getElementById('weight').value;
+        const bmi = (weight / (height * height)).toFixed(2);
+        let result = '';
+        if (bmi < 18.5) {
+            result = 'Bajo peso';
+        } else if (bmi >= 18.5 && bmi <= 24.9) {
+            result = 'Peso normal';
+        } else if (bmi >= 25 && bmi <= 29.9) {
+            result = 'Sobrepeso';
+        } else {
+            result = 'Obesidad';
+        }
+        document.getElementById('bmi-result').textContent = `Tu IMC es ${bmi} (${result})`;
+    }
+</script>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="contact">
+                <h4>Contactanos</h4>
+                <h5>Magalles entre Santa Barbara y Jaen</h5>
+                <h5>68284717</h5>
+                <h5>hecferflolop_jhr@hotmail.com</h5>
+            </div>
+            <div class="quick-links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html"> - Inicio</a></li>
+                    <li><a href="conociendonos.html"> - Conociéndonos</a></li>
+                    <li><a href="beneficios.html"> - Beneficios</a></li>
+                    <li><a href="disciplinas.html"> - Disciplinas</a></li>
+                    
+                </ul>
+            </div>
+            <div class="hours">
+                <h4>Horarios de Atención</h4>
+                <h5>Lunes - Viernes</h5>
+                <h5>08:00 AM - 10:00 PM</h5>
+                <h5>Sábados - Domingos</h5>
+                <h5>08:00 AM - 08:00 PM</h5>
+                <h5>Feriados</h5>
+                <h5>03:00 PM - 08:00 PM</h5>
+            </div>
+        </div>
+        
+    </footer>
+    
+    <div class="copyright">
+        <hr>
+        <p>&copy; 2024 Star Club Gym - Oruro - Bolivia</p>
+    </div>
+
+</body>
+</html>
